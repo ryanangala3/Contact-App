@@ -136,6 +136,15 @@ const ContactsFocusPage: React.FC = () => {
                                     />
                                 </div>
                                 <div className="formGroup">
+                                    <label className="label">Age:</label>
+                                    <input
+                                        type="text"
+                                        className="input"
+                                        value={contact.age}
+                                        onChange={(e) => setContact({ ...contact, age: Number(e.target.value) })}
+                                    />
+                                </div>
+                                <div className="formGroup">
                                     <label className="label">Eye Color:</label>
                                     <input
                                         type="text"

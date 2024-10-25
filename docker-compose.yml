@@ -1,0 +1,17 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./client-side
+      dockerfile: Dockerfile.frontend
+      image: ryangala/contacts-app-frontend:latest
+    ports:
+      - "3000:3000"
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.backend
+      image: ryangala/contacts-app-backend:latest
+    ports:
+      - "5051:5051"
